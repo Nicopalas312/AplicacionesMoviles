@@ -27,3 +27,12 @@ npx cap sync,
 
 para el pc de la profe:
 npm.cmd i -D -E @angular/cli
+
+
+13- Diríjase a su proyecto en visual y diríjase a la ubicación del archivo “barcodescanner.gradle”, el cual se encuentra en la siguiente ruta:node_modules/phonegap-plugin-barcodescanner/src/android/barcodescanner.gradle 14- En el archivo cambiar en la dependencia compilar por implementación como se muestra acontinuación este error ya se encuentra solucionado
+
+dependencias {compilar(nombre:'barcodescanner-release-2.1.5', text:'aar') }
+
+dependencias {implementación(nombre:'barcodescanner-release-2.1.5', ext:'aar') }
+
+17- Dirigirse nuevamente a su proyecto y diríjase a la siguiente ubicación del archivo:"android/gradle.properties" Y agregar lo siguiente: android.useAndroidX=true android.enableJetifier=true
